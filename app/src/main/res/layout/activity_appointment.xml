@@ -6,43 +6,28 @@
     android:layout_height="match_parent"
     android:background="@drawable/background1"
     android:orientation="vertical"
-    tools:context=".register">
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="10dp"
-        android:layout_height="10dp"
-        android:layout_below="@+id/rl"
-        android:layout_alignBottom="@+id/rl1"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="150dp"
-        android:foregroundGravity="center_vertical|center"
-        android:visibility="gone" />
+    tools:context=".Appointment">
 
     <RelativeLayout
         android:id="@+id/rl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp">
+        android:layout_marginTop="50dp">
 
         <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@drawable/logo1"
-            android:scaleType="fitCenter" />
+            android:layout_width="94dp"
+            android:layout_height="50dp"
+            android:background="@drawable/logo"
+            android:scaleType="fitCenter"
+            />
 
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/rl1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="406dp"
         android:layout_below="@+id/rl"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
@@ -67,7 +52,7 @@
             android:textColorHint="@color/white">
 
             <EditText
-                android:id="@+id/etfname"
+                android:id="@+id/doc_name"
                 android:layout_width="match_parent"
                 android:layout_height="43dp"
                 android:layout_marginTop="0dp"
@@ -75,7 +60,7 @@
                 android:autofillHints="no"
                 android:background="@drawable/et_bg"
                 android:fontFamily="sans-serif-medium"
-                android:hint="@string/first_name"
+                android:hint="enter_your_name"
                 android:inputType="text"
                 android:paddingLeft="15dp"
 
@@ -98,14 +83,14 @@
             android:textColorHint="@color/white">
 
             <EditText
-                android:id="@+id/etmail"
+                android:id="@+id/patient_name"
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:background="@drawable/et_bg"
                 android:fontFamily="sans-serif-medium"
-                android:hint="Email"
+                android:hint="enter_patient_name"
                 android:importantForAutofill="no"
-                android:inputType="textEmailAddress"
+                android:inputType="text"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:textSize="15sp" />
@@ -126,14 +111,14 @@
             android:textColorHint="@color/white">
 
             <EditText
-                android:id="@+id/etphno"
+                android:id="@+id/phone"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
                 android:layout_marginTop="10dp"
                 android:height="48dp"
                 android:background="@drawable/et_bg"
                 android:fontFamily="sans-serif-medium"
-                android:hint="Phone No"
+                android:hint="phone_no"
                 android:inputType="number"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
@@ -151,19 +136,18 @@
             android:layout_marginEnd="10dp"
             android:focusable="true"
             android:focusableInTouchMode="true"
-            android:textColorHint="@color/white"
-            app:passwordToggleEnabled="true">
+            android:textColorHint="@color/white">
 
             <EditText
-                android:id="@+id/etpass"
+                android:id="@+id/disease"
                 android:layout_width="match_parent"
                 android:layout_height="46dp"
                 android:layout_marginTop="10dp"
                 android:height="48dp"
                 android:background="@drawable/et_bg"
                 android:fontFamily="sans-serif-medium"
-                android:hint="Password"
-                android:inputType="textPassword"
+                android:hint="enter_disease_name"
+                android:inputType="text"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:textSize="15sp" />
@@ -171,87 +155,23 @@
         </com.google.android.material.textfield.TextInputLayout>
 
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/l6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/l5"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:textColorHint="@color/white"
-            app:passwordToggleEnabled="true">
-
-            <EditText
-                android:id="@+id/etpass2"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="10dp"
-                android:height="48dp"
-                android:background="@drawable/et_bg"
-                android:fontFamily="sans-serif-medium"
-                android:hint="ReVerify Password"
-                android:inputType="textPassword"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:textSize="15sp" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <TextView
-            android:id="@+id/eydob"
-            android:layout_width="84dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/l6"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:height="48dp"
-            android:background="@drawable/et_bg"
-            android:fontFamily="sans-serif-medium"
-            android:paddingLeft="15dp"
-            android:paddingTop="10dp"
-            android:paddingRight="15dp"
-            android:text="DOB :"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/etdob"
-            android:layout_width="202dp"
-            android:layout_height="38dp"
-            android:layout_below="@+id/l6"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="37dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="10dp"
-            android:layout_toEndOf="@+id/eydob"
-            android:inputType="date"
-            android:text="Tap To Select Date"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="20sp" />/>
 
 
     </RelativeLayout>
 
     <Button
-        android:id="@+id/btnregister"
+        android:id="@+id/btnsave"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_below="@id/rl1"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="84dp"
         android:background="@drawable/btn_bg"
 
         android:paddingLeft="70dp"
         android:paddingRight="70dp"
-        android:text="Register Now"
+        android:text="Save Details"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="16sp" />

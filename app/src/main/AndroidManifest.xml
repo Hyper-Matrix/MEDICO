@@ -17,7 +17,9 @@
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name="com.example.coderspot.register" />
         <activity android:name="com.example.coderspot.home" />
+        <activity android:name="com.example.coderspot.Appointment"/>
         <activity android:name="com.example.coderspot.MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

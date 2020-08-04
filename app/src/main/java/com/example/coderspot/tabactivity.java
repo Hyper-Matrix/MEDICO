@@ -31,7 +31,7 @@ public class tabactivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 mAuth.getInstance().signOut();
-                Intent intent = new Intent(tabactivity.this,MainActivity.class);
+                Intent intent = new Intent(tabactivity.this,Appointment.class);
                 startActivity(intent);
             }
         });
