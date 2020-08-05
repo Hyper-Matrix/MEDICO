@@ -58,11 +58,9 @@ public class Fragment_contact extends  Fragment{
                 String value = snapshot.child("phno").getValue(String.class);
                 String value1 = snapshot.child("fname").getValue(String.class);
                 String value2 = snapshot.child("dob").getValue(String.class);
-
                 tvnum.setText("Your Phone: "+value);
                 tvname.setText("Welcome "+value1+",");
                 tvndob.setText("Date of Birth: "+value2);
-
             }
 
             @Override

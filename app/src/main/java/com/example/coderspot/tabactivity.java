@@ -26,12 +26,26 @@ public class tabactivity extends AppCompatActivity {
         TabLayout tabs = findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
         FloatingActionButton fab = findViewById(R.id.fab);
-
+        FloatingActionButton fab2 = findViewById(R.id.fab2);
+        FloatingActionButton ffolder = findViewById(R.id.ffolder);
+        fab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(tabactivity.this,prescription.class);
+                startActivity(intent);
+            }
+        });
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mAuth.getInstance().signOut();
                 Intent intent = new Intent(tabactivity.this,Appointment.class);
+                startActivity(intent);
+            }
+        });
+        ffolder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(tabactivity.this,folder.class);
                 startActivity(intent);
             }
         });
